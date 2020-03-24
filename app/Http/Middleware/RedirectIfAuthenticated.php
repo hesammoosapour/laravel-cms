@@ -22,6 +22,9 @@ class RedirectIfAuthenticated
             return redirect(RouteServiceProvider::HOME);
         }
 
+        if (Auth::check() && Auth::user()->isAdmin())
+            return redirect()->intended();
+
         return $next($request);
     }
 }
