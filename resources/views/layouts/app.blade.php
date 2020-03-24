@@ -6,9 +6,12 @@
     <link rel="icon" type="image/png" href="/images/Clock.jpg" />
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
+{{--    <title>{{ config('app.name', 'Clock') }}</title>--}}
+    
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
@@ -18,6 +21,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
 </head>
 <body>
     <div id="app">
