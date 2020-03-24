@@ -74,9 +74,10 @@
 <body>
 <div class="flex-center position-ref full-height">
     @if (Route::has('login'))
-        <div class="top-right links pull-left">
+        <div class="top-right links ">
             @auth
                 <a href="{{ url('/home') }}">Home</a>
+                <a href="{{url('/')}}">Clock</a>
             @else
                 <a href="{{ route('login') }}">Login</a>
 
@@ -88,7 +89,7 @@
     @endif
 
     <div class="content">
-        <div class="title_clock m-b-md">
+        <div class="title title_clock m-b-md">
             Clock
         </div>
 
@@ -101,7 +102,7 @@
     </div>
 </div>
 <!-- Footer -->
-<footer class="footer_contact" >
+<footer class="myfooter" >
     <div class="row">
         <div class="col-lg-12">
             <p>Copyright &copy; Clock  {{date('Y')}}</p>

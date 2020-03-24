@@ -10,8 +10,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-{{--    <title>{{ config('app.name', 'Clock') }}</title>--}}
-    
+    <title>{{ config('app.name', 'Clock') }}</title>
+
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
