@@ -96,12 +96,10 @@
                     </div>
                 </div>
 
-
             </div>
         </div>
-{{--    @yield('footer')--}}
-{{--    @section('footer')--}}
-        @include('includes.footer')
-{{--    @stop--}}
+
+        @include('includes.myfooter')
+
     </body>
 </html>

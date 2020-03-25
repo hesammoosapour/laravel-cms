@@ -10883,7 +10883,7 @@ a.text-dark:focus {
 }
 
 .title_clock {
-    color:#5eaa64;
+    color:#5eaa64 !important;
 }
 .myfooter {
     margin-top: -6%;

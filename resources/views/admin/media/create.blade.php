@@ -22,7 +22,7 @@
 @stop
 
 @section('footer')
-    @include('includes.footer')
+    @include('includes.myfooter')
 @stop
 
 @section('scripts')
