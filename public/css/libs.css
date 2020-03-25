@@ -8687,3 +8687,56 @@ table.dataTable thead .sorting:after {
 .panel-yellow a:hover {
     color: #df8a13;
 }
+
+
+
+/****************User Profile  *********************/
+.user-row {
+    margin-bottom: 14px;
+}
+
+.user-row:last-child {
+    margin-bottom: 0;
+}
+
+.dropdown-user {
+    margin: 13px 0;
+    padding: 5px;
+    height: 100%;
+}
+
+.dropdown-user:hover {
+    cursor: pointer;
+}
+
+.table-user-information > tbody > tr {
+    border-top: 1px solid rgb(221, 221, 221);
+}
+
+.table-user-information > tbody > tr:first-child {
+    border-top: 0;
+}
+
+
+.table-user-information > tbody > tr > td {
+    border-top: 0;
+}
+.toppad
+{margin-top:20px;
+}
+
+.title_clock {
+    color:#5eaa64 ;
+}
+.myfooter {
+    margin-top: -6%;
+    /*margin-bottom: 0%;*/
+    padding-left: 3%;
+}
+.producer {
+    font-size: x-large;
+}
+
+.clock_nav_img {
+    /*transform: scale(1.2);*/
+}

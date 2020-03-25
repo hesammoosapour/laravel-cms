@@ -35,3 +35,19 @@
 .toppad
 {margin-top:20px;
 }
+
+.title_clock {
+    color:#5eaa64 ;
+}
+.myfooter {
+    margin-top: -6%;
+    /*margin-bottom: 0%;*/
+    padding-left: 3%;
+}
+.producer {
+    font-size: x-large;
+}
+
+.clock_nav_img {
+    /*transform: scale(1.2);*/
+}
