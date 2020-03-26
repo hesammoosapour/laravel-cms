@@ -8,11 +8,12 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" type="image/png" href="/images/Clock.jpg" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Clock</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="{{asset('css/app.css')}}" rel="stylesheet">
+    <link href="{{asset('css/libs.css')}}" rel="stylesheet">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -90,14 +91,22 @@
 
     <div class="content">
         <div class="title title_clock m-b-md">
+            <img class=" clock_nav_img" height="100" src="/images/Clock.jpg" alt="Clock">
             Clock
         </div>
 
         <div class="producer">
             <p class="Administrator_contact"  >Hesam Moosapour  </p>
-            <p>Production &copy; Copyright </p>
-            <h4 class="email_contact">Email : hesammoosapour@yahoo.com </h4>
-
+            <p> Production</p>
+            <a href = "mailto: hesammoosapour@yahoo.com"><i class="fa fa-envelope"></i></a>
+            &emsp;
+            <a href="https://www.instagram.com/hesam.moosapour/"><i class="fa fa-instagram"></i></a>
+            &emsp;
+            <a href="https://www.facebook.com/hesam.moosapour"><i class="fa fa-facebook-f"></i></a>
+            &emsp;
+            <a href="https://www.linkedin.com/in/hesam-moosapour/"><i class="fa fa-linkedin-square"></i></a>
+            &emsp;
+            <a href="https://twitter.com/hesammoosapour"><i class="fa fa-twitter"></i></a>
         </div>
     </div>
 </div>

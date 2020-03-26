@@ -17,7 +17,7 @@
 {{--    It should be here otherwise dashboard icon would not appear --}}
 
     <!-- Bootstrap Core CSS -->
-    <link href="{{asset('css/libs.css')}}" rel="stylesheet">
+{{--    <link href="{{asset('css/libs.css')}}" rel="stylesheet">--}}
 
     <link href="{{asset('css/app.css')}}" rel="stylesheet">
 

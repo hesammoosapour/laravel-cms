@@ -37,7 +37,7 @@
 }
 
 .title_clock {
-    color:#5eaa64 !important;
+    color:#66f454 !important;
 }
 .myfooter {
     margin-top: -6%;
@@ -54,4 +54,10 @@
 
 body {
     background-color: #66f454;
+}
+.user_dropdown {
+    color: #1b1e21 !important;
+}
+.Administrator_contact {
+    font-weight: bold;
 }

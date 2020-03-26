@@ -91,6 +91,7 @@
 
             <div class="content">
                 <div class="title title_clock m-b-md">
+                    <img class=" clock_nav_img" height="100" src="/images/Clock.jpg" alt="Clock">
                     Clock
                     <div class="links">
                         <a href="contact">Contact</a>
