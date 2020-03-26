@@ -1,6 +1,7 @@
 @extends('layouts.admin')
-
-
+@section('title')
+    <title>Admin Clock</title>
+@stop
 @section('content')
 
 

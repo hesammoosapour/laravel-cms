@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,17 +13,23 @@
         <title>Admin</title>
     @stop
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-{{--    It should be here otherwise dashboard icon would not appear --}}
+{{--    It should be exactly here otherwise dashboard icon would not appear --}}
 
-    <!-- Bootstrap Core CSS -->
-{{--    <link href="{{asset('css/libs.css')}}" rel="stylesheet">--}}
+@yield('styles')
+<!-- Bootstrap Core CSS -->
+    <link href="{{asset('css/libs.css')}}" rel="stylesheet">
 
-    <link href="{{asset('css/app.css')}}" rel="stylesheet">
+{{--    <link href="{{asset('css/app.css')}}" rel="stylesheet">--}}
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    @yield('styles')
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+{{--    bootstrap 4--}}
+    <link rel="stylesheet" href="{{asset('css/bootstrap4.4.1.min.css')}}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+{{--end bootstrap4--}}
 
+{{--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">--}}
+{{--    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">--}}
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -35,355 +40,97 @@
 
     <![endif]-->
 
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+{{--        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>--}}
+{{--        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>--}}
 
 </head>
 
-    <body id="admin-page">
+<body id="admin-page">
 
-    <div id="wrapper">
+<div id="wrapper">
 
-        <!-- Navigation -->
-        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand link_clock"  href="/"><img class=" clock_nav_img" height="40" src="/images/Clock.jpg" alt="Clock">
-                    &nbsp; Clock
-                </a>
-            </div>
-            <!-- /.navbar-header -->
+    <nav class="navbar navbar-expand-sm bg-dark  navbar-dark sticky-top container-fluid">
+        <!-- Brand/logo -->
+        <a class="navbar-brand " href="/">
+            <img class="clock_nav_img_admin" height="40" src="/images/Clock.jpg" alt="Clock">&nbsp; Clock
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Links -->
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link link_admin_nav" href="/home">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link link_admin_nav" href="posts"> Posts</a>
+            </li>
 
-
-
-            <ul class="nav navbar-top-links navbar-right">
-
-
-                <!-- /.dropdown -->
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-user fa-fw"></i> {{Auth::user()->name}} <i class="fa fa-caret-down">
-
-
-
-                        </i>
+        </ul>
+        <form class="form-inline col-sm-5" action="" method="">
+            <input class="form-control mr-sm-2   " type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0 fa fa-search" type="submit"></button>
+        </form>
+{{--        <div class="collapse navbar-collapse" id="collapsibleNavbar">--}}
+            <ul class="nav navbar-nav navbar-right collapse navbar-collapse " id="collapsibleNavbar">
+                <!-- Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        <i class="fa fa-user fa-fw"></i> {{Auth::user()->name}}
                     </a>
-                    <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
-                        </li>
-                        <li class="divider"></li>
-                        <li><a href="{{ url('/logout') }}"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
-                        </li>
-                    </ul>
-                    <!-- /.dropdown-user -->
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item " href="{{ url('/logout') }}"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                    </div>
                 </li>
-                <!-- /.dropdown -->
-
-
             </ul>
-
-
-
-
-
-
-    {{--        <ul class="nav navbar-nav navbar-right">--}}
-{{--        @if(auth()->guest())--}}
-{{--        @if(!Request::is('auth/login'))--}}
-{{--        <li><a href="{{ url('/auth/login') }}">Login</a></li>--}}
-{{--        @endif--}}
-{{--        @if(!Request::is('auth/register'))--}}
-{{--        <li><a href="{{ url('/auth/register') }}">Register</a></li>--}}
-{{--        @endif--}}
-{{--        @else--}}
-{{--        <li class="dropdown">--}}
-{{--        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ auth()->user()->name }} <span class="caret"></span></a>--}}
-{{--        <ul class="dropdown-menu" role="menu">--}}
-{{--        <li><a href="{{ url('/auth/logout') }}">Logout</a></li>--}}
-
-{{--        <li><a href="{{ url('/admin/profile') }}/{{auth()->user()->id}}">Profile</a></li>--}}
-{{--        </ul>--}}
-{{--        </li>--}}
-{{--        @endif--}}
-{{--        </ul>--}}
-
-
-
-
-
-        <div class="navbar-default sidebar" role="navigation">
-            <div class="sidebar-nav navbar-collapse">
-                <ul class="nav" id="side-menu">
-                    <li class="sidebar-search">
-                        <div class="input-group custom-search-form">
-                            <input type="text" class="form-control" placeholder="Search...">
-                                <span class="input-group-btn">
-                                    <button class="btn btn-default" type="button">
-                                        <i class="fa fa-search"></i>
-                                    </button>
-                                </span>
-                        </div>
-                        <!-- /input-group -->
-                    </li>
-                    <li >
-                        <a href="/admin"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
-                    </li>
-
-                    <li>
-                        <a href="#"><i class="fa fa-user fa-fw"></i>Users<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="{{route('admin.users.index')}}"><i class="fa fa-group"></i> All Users</a>
-                            </li>
-
-                            <li>
-                                <a href="{{route('admin.users.create')}}"><i class='fas fa-user-plus'></i> Create User</a>
-                            </li>
-
-                        </ul>
-                        <!-- /.nav-second-level -->
-                    </li>
-
-                    <li>
-                        <a href="{{route('admin.posts.index')}}"><i class="fa fa-align-justify"></i>
-                            Posts<span class="fa arrow"></span>
-                        </a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="{{route('admin.posts.index')}}" ><i class="glyphicon glyphicon-list"></i> All Posts</a>
-                            </li>
-
-                            <li>
-                                <a href="{{route('admin.posts.create')}}"><i class="material-icons" style="font-size:18px">
-                                        add_box</i> Create Post
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="{{route('admin.comments.index')}}"><i style="font-size:18px" class="material-icons">
-                                        mode_comment</i> Comments<span class="fa arrow"></span>
-                                </a>
-                                <ul class="nav nav-second-level">
-                                    <li><a href="{{route('admin.comments.index')}}"><i class="glyphicon glyphicon-comment"></i> All Comments
-                                        </a>
-                                    </li>
-                                    <li><a href="{{route('admin.replies.index')}}">
-                                            <i style="font-size:18px" class="material-icons">reply_all</i> All Replies
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-
-                        </ul>
-                        <!-- /.nav-second-level -->
-
-                    </li>
-
-
-                    <li>
-                        <a href="{{route('admin.categories.index')}}"><i class="fa fa-list-ul"></i> Categories<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="{{route('admin.categories.index')}}"><i class="fa fa-list-ol"></i> All Categories</a>
-                            </li>
-
-
-                        </ul>
-                        <!-- /.nav-second-level -->
-                    </li>
-
-
-                    <li>
-                        <a href="#"><i class="glyphicon glyphicon-film"></i> Media<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="{{route('admin.media.index')}}" ><i class="glyphicon glyphicon-music"></i> All Media
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="{{route('admin.media.create')}}"><i class="glyphicon glyphicon-circle-arrow-up"></i>
-                                    Upload Media
-                                </a>
-                            </li>
-
-                        </ul>
-                        <!-- /.nav-second-level -->
-                    </li>
-
-
-                    <li>
-                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="flot.html">Flot Charts</a>
-                            </li>
-                            <li>
-                                <a href="morris.html">Morris.js Charts</a>
-                            </li>
-                        </ul>
-                        <!-- /.nav-second-level -->
-                    </li>
-                    <li>
-                        <a href="tables.html"><i class="fa fa-table fa-fw"></i> Tables</a>
-                    </li>
-                    <li>
-                        <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Forms</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="panels-wells.html">Panels and Wells</a>
-                            </li>
-                            <li>
-                                <a href="buttons.html">Buttons</a>
-                            </li>
-                            <li>
-                                <a href="notifications.html">Notifications</a>
-                            </li>
-                            <li>
-                                <a href="typography.html">Typography</a>
-                            </li>
-                            <li>
-                                <a href="icons.html"> Icons</a>
-                            </li>
-                            <li>
-                                <a href="grid.html">Grid</a>
-                            </li>
-                        </ul>
-                        <!-- /.nav-second-level -->
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="#">Second Level Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Second Level Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Third Level <span class="fa arrow"></span></a>
-                                <ul class="nav nav-third-level">
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                </ul>
-                                <!-- /.nav-third-level -->
-                            </li>
-                        </ul>
-                        <!-- /.nav-second-level -->
-                    </li>
-                    <li class="active">
-                        <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a class="active" href="blank.html">Blank Page</a>
-                            </li>
-                            <li>
-                                <a href="login.html">Login Page</a>
-                            </li>
-                        </ul>
-                        <!-- /.nav-second-level -->
-                    </li>
-                </ul>
-
-
-            </div>
-            <!-- /.sidebar-collapse -->
-        </div>
-        <!-- /.navbar-static-side -->
+{{--        </div>--}}
     </nav>
+    <!-- Navigation -->
 
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-
-
-
-    <div class="navbar-default sidebar" role="navigation">
-        <div class="sidebar-nav navbar-collapse">
-            <ul class="nav" id="side-menu">
-                <li>
-                    <a href="/profile"><i class="fa fa-dashboard fa-fw"></i>Profile</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
-
-
-
-
-                <li>
-                    <a href="#"><i class="fa fa-wrench fa-fw"></i> Posts<span class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level">
-                        <li>
-                            <a href="">All Posts</a>
-                        </li>
-
-                        <li>
-                            <a href="">Create Post</a>
-                        </li>
-
-                    </ul>
-                    <!-- /.nav-second-level -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
                 </li>
-
-
-
-
-
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
             </ul>
-
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
         </div>
-
-    </div>
-
-</div>
-
-
-
-
-
-
-<!-- Page Content -->
-<div id="page-wrapper">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header"></h1>
-
-                @yield('content')
-            </div>
-            <!-- /.col-lg-12 -->
-        </div>
-        <!-- /.row -->
-    </div>
-    <!-- /.container-fluid -->
-</div>
-<!-- /#page-wrapper -->
-
+    </nav>
 </div>
 <!-- /#wrapper -->
 
 <!-- jQuery -->
 <script src="{{asset('js/libs.js')}}"></script>
-
-
 @yield('scripts')
-
 
 @yield('footer')
 

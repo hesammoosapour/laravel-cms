@@ -28,6 +28,12 @@ mix.styles([
     'resources/assets/css/libs/blog-post.css',
 ], 'public/css/blog-post.css');
 
+
+mix.styles([
+    'resources/assets/css/libs/bootstrap4.4.1.min.css',
+], 'public/css/bootstrap4.4.1.min.css');
+
+
 mix.scripts([
     'resources/assets/js/libs/bootstrap.js',
     'public/js/dropzone.min.js',

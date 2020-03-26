@@ -32,10 +32,10 @@
 .table-user-information > tbody > tr > td {
     border-top: 0;
 }
-.toppad
-{margin-top:20px;
+.toppad {
+    margin-top:20px;
 }
-
+/* Clock */
 .title_clock {
     color:#66f454 !important;
 }
@@ -61,3 +61,10 @@ body {
 .Administrator_contact {
     font-weight: bold;
 }
+.clock_nav_img_admin {
+    transform: scale(1.5);
+}
+.link_admin_nav {
+    color: #dbe3e3 !important;
+}
+
