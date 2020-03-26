@@ -16,8 +16,7 @@ mix.react('resources/js/app.js', 'public/js')
 
 
 mix.styles([
-    'resources/assets/css/libs/blog-post.css',
-    'resources/assets/css/libs/bootstrap.css',
+    // 'resources/assets/css/libs/bootstrap.css',
     'resources/assets/css/dropzone.min.css',
     'resources/assets/css/libs/font-awesome.css',
     'resources/assets/css/libs/metisMenu.css',
@@ -25,7 +24,9 @@ mix.styles([
     'resources/assets/css/libs/styles.css'
 ], 'public/css/libs.css');
 
-
+mix.styles([
+    'resources/assets/css/libs/blog-post.css',
+], 'public/css/blog-post.css');
 
 mix.scripts([
     'resources/assets/js/libs/bootstrap.js',

@@ -37,7 +37,7 @@
 }
 
 .title_clock {
-    color:#5eaa64 ;
+    color:#5eaa64 !important;
 }
 .myfooter {
     margin-top: -6%;
@@ -49,5 +49,9 @@
 }
 
 .clock_nav_img {
-    transform: scale(1.2);
+    transform: scale(1.5);
+}
+
+body {
+    background-color: #66f454;
 }
