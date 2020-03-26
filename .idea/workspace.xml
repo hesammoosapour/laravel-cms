@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6108dd90-ba04-4a3e-81ea-8addfd0db060" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/css/libs-self.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/libs.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/libs.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/libs.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/libs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/libs/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/libs/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/sass/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -128,8 +121,11 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1Za42IbFZYXPQNkwE1ts556W5ep" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
@@ -165,7 +161,8 @@
       <workItem from="1585067120871" duration="100000" />
       <workItem from="1585067240351" duration="5912000" />
       <workItem from="1585121493534" duration="2368000" />
-      <workItem from="1585153797945" duration="2845000" />
+      <workItem from="1585153797945" duration="3039000" />
+      <workItem from="1585198715348" duration="1395000" />
     </task>
     <task id="LOCAL-00001" summary="so far so good">
       <created>1585072410593</created>
@@ -194,6 +191,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="so far so good" />
     <option name="LAST_COMMIT_MESSAGE" value="so far so good" />
   </component>
