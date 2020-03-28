@@ -5,7 +5,7 @@
 @section('content')
 
 
-    <h1>Admin</h1>
+    <h3>Administration Section </h3>
 
 
 @stop

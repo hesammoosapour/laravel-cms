@@ -64,7 +64,38 @@ body {
 .clock_nav_img_admin {
     transform: scale(1.5);
 }
-.link_admin_nav {
-    color: #dbe3e3 !important;
+.link_admin_nav , .link_user_dropdown{
+    color: #f0f5e7 !important;
 }
+/*.sidebar-sticky {*/
+/*    position: relative;*/
+/*    top: 0;*/
+/*    height: calc(100vh - 48px);*/
+/*    padding-top: .5rem;*/
+/*    overflow-x: hidden;*/
+/*    overflow-y: auto; !* Scrollable contents if viewport is shorter than content. *!*/
+/*}*/
+/*.sidebar-toggler:hover, .sidebar-toggler:focus {*/
+/*    text-decoration: none;*/
+/*}*/
+.sidebar-toggler-icon {
+    /*display: inline-block;*/
+    display: none;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    content: "";
+    background: no-repeat center center;
+    background-size: 100% 100%;
+}
+.sidebar_nav {
+    top: -50px;
+}
+span.menu-collapsed {
+    color: white;
+}
+#main_menu {
+    color: black !important;
+}
+
 

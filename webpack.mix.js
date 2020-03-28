@@ -33,6 +33,10 @@ mix.styles([
     'resources/assets/css/libs/bootstrap4.4.1.min.css',
 ], 'public/css/bootstrap4.4.1.min.css');
 
+mix.styles([
+    'resources/assets/css/libs/sidebar.css',
+], 'public/css/sidebar.css');
+
 
 mix.scripts([
     'resources/assets/js/libs/bootstrap.js',
@@ -42,3 +46,7 @@ mix.scripts([
     'resources/assets/js/libs/sb-admin-2.js',
     'resources/assets/js/libs/scripts.js'
 ], 'public/js/libs.js');
+
+mix.scripts([
+    'resources/assets/js/libs/sidebar.js'
+],'public/js/sidebar.js');

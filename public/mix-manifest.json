@@ -4,5 +4,7 @@
     "/css/libs.css": "/css/libs.css",
     "/css/blog-post.css": "/css/blog-post.css",
     "/css/bootstrap4.4.1.min.css": "/css/bootstrap4.4.1.min.css",
-    "/js/libs.js": "/js/libs.js"
+    "/css/sidebar.css": "/css/sidebar.css",
+    "/js/libs.js": "/js/libs.js",
+    "/js/sidebar.js": "/js/sidebar.js"
 }
