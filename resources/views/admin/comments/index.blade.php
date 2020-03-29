@@ -8,8 +8,11 @@
     @if( count($comments) > 0)
 
         <h1>All Comments</h1>
-
-    <table class="table">
+        <div class="flex">
+               <pre class="h3 ">{{$comments_no}} Comments - {{$comments_no_active}} Comments Exist - {{$comments_no_approved}} Approved
+               </pre>
+        </div>
+    <table class="table table-sm">
         <thead>
         <tr>
             <th>id</th>
@@ -17,6 +20,10 @@
             <th>Email</th>
             <th>Comment</th>
             <th>Post Title</th>
+            <th>Created</th>
+            <th>Updated</th>
+            <th>Deleted</th>
+            <th>Replies Link</th>
         </tr>
         </thead>
 
@@ -32,6 +39,9 @@
               <td><a href="{{route('home.post',$comment->post->id)}}"><?php echo $result[0]->title; ?>
                   </a><!--Post title-->
               </td>
+              <td>{{isset($comment->created_at) ? $comment->created_at->diffForhumans() : ""}}</td>
+              <td>{{isset($comment->updated_at) ? $comment->updated_at->diffForhumans() : ""}}</td>
+              <td>{{isset($comment->deleted_at) ? "Deleted ".$comment->deleted_at->diffForhumans() : "Exists"}}</td>
 
               <td><a href="{{route('admin.replies.show', $comment->id)}}">View Replies</a></td>
               <td>

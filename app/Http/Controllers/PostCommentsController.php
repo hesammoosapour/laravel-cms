@@ -20,13 +20,18 @@ class PostCommentsController extends Controller
      */
     public function index()
     {
-        $comments = Comment::all();
+        $comments = Comment::withTrashed()->get();
+
+        $comments_no = Comment::withTrashed()->count();
+        $comments_no_active = Comment::count();
+        $comments_no_approved = Comment::whereIs_active(1)->count();
 
         foreach ($comments as $comment) {
 
             $user = User::findOrFail($comment->commenter_id)->first(); // Try this for other admins, see if it works.
 
-            return view('admin.comments.index', compact('comments','user'));
+            return view('admin.comments.index',
+                compact('comments','user','comments_no','comments_no_active','comments_no_approved'));
         }
 
         return view('admin.comments.index', compact('comments'));
@@ -71,18 +76,26 @@ class PostCommentsController extends Controller
      */
     public function show($id)
     {
-        $comments = Comment::all();
-        $post = Post::findOrFail($id);
 
-        foreach ($comments as $comment) {
+        $post = Post::whereId($id)->withTrashed()->get();
+//        Get comments for all posts including those which have been even deleted
 
-            $comments = $post->comments;
+        $comments_no = Post::findOrFail($post[0]->id)->comments()->withTrashed()->count();
+        $comments_no_active = Post::findOrFail($post[0]->id)->comments()->count();
+        $comments_no_approved = Post::findOrFail($post[0]->id)->comments()->whereIs_active(1)->count();
+
+        $comments = $post[0]->comments;
+        $all_comments = Comment::withTrashed()->wherePost_id($id)->get();
+
+        foreach ($all_comments as $comment) {
 
             $user = User::findOrFail($comment->commenter_id)->first(); // Try this for other admins, see if it works.
-            return view('admin.comments.show', compact('comments','user'));
+
+            return view('admin.comments.show',
+                compact('comments','all_comments','user','comments_no','comments_no_active','comments_no_approved'));
         }
 
-        return view('admin.comments.show', compact('comments'));
+        return view('admin.comments.show', compact('comments','comments_no'));
 
     }
 

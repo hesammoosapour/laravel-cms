@@ -25,7 +25,6 @@ class CommentReply extends Model
 
         return $this->belongsTo('App\Comment');
 
-
     }
 
 

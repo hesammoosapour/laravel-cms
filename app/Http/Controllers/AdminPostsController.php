@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use App\Comment;
+use App\CommentReply;
 use App\Http\Requests\PostsCreateRequest;
 use App\Photo;
 use App\Post;
@@ -26,9 +27,10 @@ class AdminPostsController extends Controller
     {
 //        $posts = Post::withTrashed()->IdOldest('id');
 
-        $posts = Post::withTrashed()->latest("updated_at")->paginate(10);
+        $posts = Post::with('comments.replies')->withTrashed()->latest("updated_at")->paginate(10);
 
-        return view('admin.posts.index', compact('posts'));
+
+        return view('admin.posts.index', compact('posts','comments'));
 
     }
 
@@ -80,6 +82,16 @@ class AdminPostsController extends Controller
     public function show($id)
     {
         //
+//        $posts = Post::withCount('comments')->get();
+//        foreach ($posts as $post) {
+//            echo $post->comments_count;
+//        }
+
+//        $posts_dependencies = Post::withCount('comments', 'replies')->get();
+//
+//        echo $posts_dependencies[0]->comments_count;
+//        echo $posts_dependencies[0]->replies_count;
+
     }
 
     /**
