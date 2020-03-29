@@ -2,7 +2,7 @@
 
 
 @section('content')
-    <h1>Create Users</h1>
+    <h1>Create User</h1>
 
     {!! Form::open(['method'=>'POST', 'action'=> 'AdminUsersController@store','files'=>true]) !!}
 
@@ -15,6 +15,7 @@
         {!! Form::label('email', 'Email:') !!}
         {!! Form::email('email', null, ['class'=>'form-control'])!!}
     </div>
+{{--    Chrome auto filler shows your email instead of that user's email--}}
 
     <div class="form-group">
         {!! Form::label('role_id', 'Role:') !!}

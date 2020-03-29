@@ -98,7 +98,7 @@
     <nav class="navbar navbar-expand-md navbar-dark bg-success" >
         <a class="navbar-brand " href="/">
             <img class="d-inline-block align-top clock_nav_img_admin" height="40" src="/images/Clock.jpg" alt="Clock">
-            &nbsp;<span class="menu-collapsed"> Clock</span>
+{{--            &nbsp;<span class="menu-collapsed"></span>--}}
         </a>
         <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -106,6 +106,9 @@
         <div class="collapse navbar-collapse " id="navbarNavDropdown">
             <ul  class="navbar-nav mr-auto">
                 <li class="nav-item active">
+                    <a class="nav-link link_admin_nav clock_link" href="/"> Clock <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item ">
                     <a class="nav-link link_admin_nav" href="/home">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
@@ -216,7 +219,7 @@
                     <a href="{{route('admin.posts.index')}}" class="list-group-item list-group-item-action bg-dark text-white">
                         <span class="menu-collapsed"><i class="fa fa-list-ol fa-fw mr-3"></i> All Posts</span>
                     </a>
-                    <a href="{{route('admin.users.create')}}" class="list-group-item list-group-item-action bg-dark text-white">
+                    <a href="{{route('admin.posts.create')}}" class="list-group-item list-group-item-action bg-dark text-white">
                         <span class="menu-collapsed"><i class="fa fa-plus-square fa-fw mr-3" ></i> Create Post</span>
                     </a>
                     <a href="#comments" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
@@ -297,16 +300,18 @@
             </ul><!-- List Group END-->
         </div><!-- sidebar-container END -->
         <!-- MAIN -->
-        <div class="col p-4">
+        <div class="col p-4 col-sm-9 ">
             <h1 class="display-4">Admin</h1>
-            <div class="card">
-                <h5 class="card-header font-weight-light">Explore</h5>
-                <div class="card-body">
-                    <ul>
-                        <li>@yield('content')</li>
-                    </ul>
-                </div>
-            </div>
+            <hr>
+{{--            <div class="card">--}}
+{{--                <h5 class="card-header font-weight-light">Explore</h5>--}}
+{{--                <div class="card-body">--}}
+{{--                    <ul>--}}
+{{--                        <li>@yield('content')</li>--}}
+{{--                    </ul>--}}
+                    @yield('content')
+{{--                </div>--}}
+{{--            </div>--}}
         </div><!-- Main Col END -->
     </div><!-- body-row END -->
 

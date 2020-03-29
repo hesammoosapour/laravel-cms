@@ -17,7 +17,7 @@
         </p>
     @endif
 
-    <h1>Media</h1>
+    <h2>Media</h2>
 
     @if($photos)
 
@@ -39,7 +39,7 @@
             </div>
 
 
-        <table class="table">
+        <table class="table  table-sm">
             <thead>
             <tr>
                 <th><input type="checkbox" id="options"></th>

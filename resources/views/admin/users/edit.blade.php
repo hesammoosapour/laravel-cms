@@ -11,15 +11,15 @@
 
     <div class="row">
 
-        <div class="col-sm-3">
+        <div class=" col-sm-3 ">
 
-            <h4>Profile Photo : </h4>
-            <img src="{{$user->photo ? $user->photo->path : '/images/Profile_photo.png'}}" alt="" class="img-responsive img-rounded">
+            <h4>Profile Photo: </h4>
+            <img  src="{{$user->photo ? $user->photo->path : '/images/Profile_photo.png'}}" alt="" class="col-sm-12  img-responsive img-rounded">
 
-            <p>{{$user->photo ?  str_replace("/images/","", $user->photo->path) : '/images/Profile_photo.png'}}</p>
+            <p class="text-break">{{$user->photo ?  str_replace("/images/","", $user->photo->path) : '/images/Profile_photo.png'}}</p>
         </div>
 
-        <div class="col-sm-9">
+        <div class="col-sm-9 ">
 {{--Update ----}}
             {!! Form::model($user, ['method'=>'PATCH', 'action'=> ['AdminUsersController@update', $user->id],'files'=>true]) !!}
 
@@ -33,6 +33,7 @@
                 {!! Form::label('email', 'Email:') !!}
                 {!! Form::email('email', null, ['class'=>'form-control'])!!}
             </div>
+            {{--    Chrome auto filler shows your email instead of that user's email--}}
 
             <div class="form-group">
                 {!! Form::label('role_id', 'Role:') !!}

@@ -1,12 +1,15 @@
 @extends('layouts.admin')
-
+@section('title')
+    <title>Categories Clock Posts</title>
+@stop
 @section('content')
     @if(Session::has('deleted_category'))
         <p class=" label-danger">{{session('deleted_category')}}</p>
     @endif
     <h1>Categories</h1>
 
-    <div class="col-sm-6">
+<div class="d-flex">
+    <div class="col-sm-4 ">
 
         {!! Form::open(['method'=>'POST', 'action'=> 'AdminCategoriesController@store']) !!}
              <div class="form-group">
@@ -21,7 +24,7 @@
 
     </div>
 
-    <div class="col-sm-6">
+    <div class="col-sm-8">
 
         @if($categories)
 
@@ -54,5 +57,5 @@
         @endif
 
     </div>
-
+</div>
 @stop

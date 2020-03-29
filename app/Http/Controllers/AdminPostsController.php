@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use App\Comment;
 use App\Http\Requests\PostsCreateRequest;
 use App\Photo;
 use App\Post;
@@ -11,6 +12,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
 
 class AdminPostsController extends Controller
@@ -24,7 +26,8 @@ class AdminPostsController extends Controller
     {
 //        $posts = Post::withTrashed()->IdOldest('id');
 
-        $posts  = Post::withTrashed()->latest("updated_at")->paginate(10);
+        $posts = Post::withTrashed()->latest("updated_at")->paginate(10);
+
         return view('admin.posts.index', compact('posts'));
 
     }

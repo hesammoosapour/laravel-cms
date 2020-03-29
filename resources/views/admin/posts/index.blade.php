@@ -1,5 +1,5 @@
 <?php
-use Illuminate\Support\Str;
+use App\Post;use Illuminate\Support\Str;
 ?>
 @extends('layouts.admin')
 @section('title')
@@ -12,7 +12,7 @@ use Illuminate\Support\Str;
         <p class=" label-danger">{{session('deleted_post')}}</p>
     @endif
     <h1>All Posts</h1>
-    <table class="table">
+    <table class="table ">
         <thead>
         <tr>
             <th>Id</th>
@@ -30,7 +30,7 @@ use Illuminate\Support\Str;
         <tbody>
         @if($posts)
             @foreach($posts as $post)
-                <tr>
+                    <tr>
                     <td>{{$post->id}}</td>
                     <td><a href="{{route('home.post',$post->slug ? $post->slug : $post->id)}}">
                             <img height="60" width="60" src="{{$post->photo ? $post->photo->path : '/images/400x400.png' }}" alt="">
@@ -39,11 +39,13 @@ use Illuminate\Support\Str;
                     <td>{{$post->category ? $post->category->name : 'Uncategorized'}}</td>
                     <td><a href="{{route('home.post', $post->slug ? $post->slug : $post->id)}}">{{$post->title}}</a></td>
                     <td>{{ Str::limit(strip_tags($post->body),30)}} </td>
-                    <td><a href="{{route('admin.comments.show', $post->id)}}">View Comments</a></td>
+                    <?php
+                        $comments_no = DB::table('comments')->wherePost_id($post->id)->count();?>
+                    <td><a href="{{route('admin.comments.show', $post->id)}}">{{$comments_no}} Comments</a></td>
                     <td><a href="{{route('home.post',  $post->slug ? $post->slug : $post->id)}}">View Post</a></td>
                     <td>{{isset($post->created_at) ? $post->created_at->diffForhumans() : ""}}</td>
                     <td>{{isset($post->updated_at) ? $post->updated_at->diffForhumans() : ""}}</td>
-                    <td>{{isset($post->deleted_at) ? $post->deleted_at->diffForhumans() : ""}}</td>
+                    <td>{{isset($post->deleted_at) ? $post->deleted_at->diffForhumans()." Deleted" : "Active"}}</td>
                     <td><a href="{{route('admin.posts.edit', $post->id)}}"
                            class="btn btn-primary  active" role="button" aria-pressed="true">Edit
                         </a></td>

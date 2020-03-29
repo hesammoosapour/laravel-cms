@@ -2188,5 +2188,7 @@ span.menu-collapsed {
 #main_menu {
     color: black !important;
 }
-
+.clock_link {
+    font-weight: bolder;
+}
 

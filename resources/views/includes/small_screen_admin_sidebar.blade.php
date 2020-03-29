@@ -34,7 +34,7 @@
         <a href="{{route('admin.posts.index')}}" class="list-group-item list-group-item-action bg-dark text-white">
             <span class="menu-collapsed"><i class="fa fa-list-ol fa-fw mr-3"></i> All Posts</span>
         </a>
-        <a href="{{route('admin.users.create')}}" class="list-group-item list-group-item-action bg-dark text-white">
+        <a href="{{route('admin.posts.create')}}" class="list-group-item list-group-item-action bg-dark text-white">
             <span class="menu-collapsed"><i class="fa fa-plus-square fa-fw mr-3" ></i> Create Post</span>
         </a>
         <a href="#comments" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
