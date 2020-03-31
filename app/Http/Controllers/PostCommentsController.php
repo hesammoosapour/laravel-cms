@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Comment;
+use App\CommentReply;
 use App\Post;
 use App\User;
 use Illuminate\Http\Request;
@@ -22,19 +23,22 @@ class PostCommentsController extends Controller
     {
         $comments = Comment::withTrashed()->get();
 
+//        $comments  = Comment::with('replies')->withTrashed()->get();
+
         $comments_no = Comment::withTrashed()->count();
         $comments_no_active = Comment::count();
         $comments_no_approved = Comment::whereIs_active(1)->count();
 
-        foreach ($comments as $comment) {
 
-            $user = User::findOrFail($comment->commenter_id)->first(); // Try this for other admins, see if it works.
+//        foreach ($comments as $comment) {
+
+//            $user = User::findOrFail($comment->commenter_id)->first(); // Try this for other admins, see if it works.
 
             return view('admin.comments.index',
                 compact('comments','user','comments_no','comments_no_active','comments_no_approved'));
-        }
+//        }
 
-        return view('admin.comments.index', compact('comments'));
+//        return view('admin.comments.index', compact('comments'));
 
     }
 

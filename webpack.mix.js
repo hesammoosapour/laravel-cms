@@ -39,12 +39,13 @@ mix.styles([
 
 
 mix.scripts([
-    'resources/assets/js/libs/bootstrap.js',
-    'public/js/dropzone.min.js',
-    'resources/assets/js/libs/jquery.js',
+    'resources/assets/js/libs/bootstrap4.min.js',
+    'resources/assets/js/libs/dropzone.min.js',
+    'resources/assets/js/libs/jquery3.min.js',
     'resources/assets/js/libs/metisMenu.js',
     'resources/assets/js/libs/sb-admin-2.js',
-    'resources/assets/js/libs/scripts.js'
+    'resources/assets/js/libs/scripts.js',
+    'resources/assets/js/libs/popper.min.js'
 ], 'public/js/libs.js');
 
 mix.scripts([

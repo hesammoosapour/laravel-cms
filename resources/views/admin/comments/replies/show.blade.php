@@ -7,15 +7,24 @@
     @if(count($replies) > 0)
 
         <h1>Replies for Comment : </h1>
-        <h4>{{$comment->body}}</h4>
+        <div class="flex">
+               <pre class="h3 ">{{$replies_no}} Replies - {{$replies_no_active}} Replies Exist - {{$replies_no_approved}} Approved
+               </pre>
+        </div>
 
-        <table class="table">
+        <h4>Comment : <span class="h5">{{$comment[0]->body}}</span></h4>
+
+        <table class="table ">
             <thead>
             <tr>
                 <th>id</th>
                 <th>Replier</th>
                 <th>Email</th>
                 <th>Body</th>
+                <th>Post Link</th>
+                <th>Created</th>
+                <th>Updated</th>
+                <th>Deleted</th>
             </tr>
             </thead>
             <tbody>
@@ -29,6 +38,9 @@
                     <td>{{$replier->email}}</td>
                     <td>{{$reply->body}}</td>
                     <td><a href="{{route('home.post',$reply->comment->post->id)}}">View Post</a></td>
+                    <td>{{isset($reply->created_at) ? $reply->created_at->diffForhumans() : ""}}</td>
+                    <td>{{isset($reply->updated_at) ? $reply->updated_at->diffForhumans() : ""}}</td>
+                    <td>{{isset($reply->deleted_at) ? "Deleted ".$reply->deleted_at->diffForhumans() : "Exists"}}</td>
                     <td>
                         @if($reply->is_active == 1)
 

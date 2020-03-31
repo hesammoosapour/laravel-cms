@@ -10,7 +10,10 @@
     <meta name="author" content="">
     <link rel="icon" type="image/png" href="/images/Clock.jpg" />
     @yield ('title')
-    <title>Blog Post - Clock </title>
+    @section('title')
+        <title>Blog Post - Clock </title>
+    @stop
+
 
     <!-- Bootstrap Core CSS -->
     <link href="{{asset('css/app.css')}}" rel="stylesheet">

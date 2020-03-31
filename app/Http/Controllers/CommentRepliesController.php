@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Comment;
 use App\CommentReply;
+use App\Post;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -19,12 +20,20 @@ class CommentRepliesController extends Controller
      */
     public function index()
     {
-        $replies = CommentReply::all();
+        $replies = CommentReply::withTrashed()->get();
+        $replies_no = CommentReply::withTrashed()->count();
+        $replies_no_active = CommentReply::count();
+        $replies_no_approved = CommentReply::whereIs_active(1)->count();
+
 
             $comment_id =  $replies[0]->comment_id;
-            $comment =  Comment::whereId($comment_id)->first();
-            return view('admin.comments.replies.index',compact('replies','comment','comment_id'));
+            $comments =  Comment::whereId($comment_id)->withTrashed()->get();
 
+        foreach ($comments as $comment) {
+
+            return view('admin.comments.replies.index',
+                compact('replies', 'comments', 'comment_id', 'replies_no', 'replies_no_active', 'replies_no_approved'));
+        }
     }
 
     /**
@@ -82,11 +91,19 @@ class CommentRepliesController extends Controller
     public function show($id)
     {
 
-        $comment = Comment::whereId($id)->first();
+        $comment = Comment::whereId($id)->withTrashed()->get();
 
-        $replies = $comment->replies;
+        //        Get replies for all comments including those which have been even deleted
 
-        return view(' admin.comments.replies.show', compact('replies','comment'));
+        $replies_no = Comment::findOrFail($comment[0]->id)->replies()->withTrashed()->count();
+        $replies_no_active = Comment::findOrFail($comment[0]->id)->replies()->count();
+        $replies_no_approved = Comment::findOrFail($comment[0]->id)->replies()->whereIs_active(1)->count();
+
+
+        $replies = $comment[0]->replies;
+
+        return view(' admin.comments.replies.show',
+            compact('replies','comment','replies_no','replies_no_active','replies_no_approved'));
 
     }
 

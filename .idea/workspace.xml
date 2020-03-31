@@ -2,13 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6108dd90-ba04-4a3e-81ea-8addfd0db060" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/assets/js/libs/bootstrap4.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/assets/js/libs/jquery3.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/assets/js/libs/popper.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/CommentReply.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/CommentReply.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminPostsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminPostsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CommentRepliesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CommentRepliesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostCommentsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostCommentsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/comments/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/comments/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/comments/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/comments/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/posts/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/posts/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/comments/replies/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/comments/replies/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/comments/replies/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/comments/replies/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/blog-post.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/blog-post.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -200,7 +205,10 @@
       <workItem from="1585198715348" duration="20556000" />
       <workItem from="1585301929408" duration="9085000" />
       <workItem from="1585376272545" duration="26223000" />
-      <workItem from="1585460897152" duration="22680000" />
+      <workItem from="1585460897152" duration="23038000" />
+      <workItem from="1585548300871" duration="406000" />
+      <workItem from="1585572021258" duration="13534000" />
+      <workItem from="1585634051048" duration="2016000" />
     </task>
     <task id="LOCAL-00001" summary="so far so good">
       <created>1585072410593</created>
