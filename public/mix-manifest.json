@@ -6,5 +6,7 @@
     "/css/bootstrap4.4.1.min.css": "/css/bootstrap4.4.1.min.css",
     "/css/sidebar.css": "/css/sidebar.css",
     "/js/libs.js": "/js/libs.js",
-    "/js/sidebar.js": "/js/sidebar.js"
+    "/js/sidebar.js": "/js/sidebar.js",
+    "/js/old.js": "/js/old.js",
+    "/js/new.js": "/js/new.js"
 }

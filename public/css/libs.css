@@ -2144,7 +2144,7 @@ table.dataTable thead .sorting:after {
 }
 
 body {
-    background-color: #66f454;
+    background-color: #66f454 ;
 }
 .user_dropdown {
     color: #1b1e21 !important;
@@ -2190,5 +2190,12 @@ span.menu-collapsed {
 }
 .clock_link {
     font-weight: bolder;
+}
+.light_clock_bg {
+    background-color: #e6ffdc;
+}
+
+.moderate_clock_bg{
+    background-color: #8eff77;
 }
 

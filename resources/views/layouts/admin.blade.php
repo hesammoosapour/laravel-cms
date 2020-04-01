@@ -20,12 +20,7 @@
     <link href="{{asset('css/libs.css')}}" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/sidebar.css')}}">
 
-{{--    <link href="{{asset('css/app.css')}}" rel="stylesheet">--}}
-
-{{--    bootstrap 4--}}
     <link rel="stylesheet" href="{{asset('css/bootstrap4.4.1.min.css')}}">
-
-{{--end bootstrap4--}}
 
 {{--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">--}}
 {{--    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">--}}
@@ -42,11 +37,18 @@
 {{--        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>--}}
 {{--        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>--}}
 
+{{--    <script src="{{asset('js/old.js')}}"></script>--}}
 
+    <script src="{{asset('js/libs.js')}}"></script>
+    <script src="{{asset('js/new.js')}}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="{{asset('js/sidebar.js')}}"></script>
 
 </head>
 
-<body id="admin-page">
+<body id="admin-page" class="light_clock_bg">
 
 <div id="wrapper" >
 
@@ -376,10 +378,9 @@
 
 </div>
 <!-- /#wrapper -->
-
 <!-- jQuery -->
-<script src="{{asset('js/libs.js')}}"></script>
-<script src="{{asset('js/sidebar.js')}}"></script>
+
+
 @yield('scripts')
 
 @yield('footer')

@@ -12,9 +12,11 @@
         <h4><i class="material-icons">&#xe24c;</i> Leave a Comment:</h4>
         <div style="display: inline-flex">
             <img height="65" class="media-object" src="{{Auth::user()->gravatar ? Auth::user()->gravatar : Auth::user()->photo()->path}}" alt="">
-            &nbsp;<h4 class="media-heading"><a href="#">{{Auth::user()->name}}</a></h4>
+            &nbsp;
+            <h4 class="media-heading"><a href="#">{{Auth::user()->name}}</a></h4>
 
         </div>
+
 
         {!! Form::open(['method'=>'POST', 'action'=> 'PostCommentsController@store']) !!}
 

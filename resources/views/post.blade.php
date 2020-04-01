@@ -25,11 +25,11 @@
 
     <!-- Date/Time -->
     <p><span class="glyphicon glyphicon-time"></span>
-        {{$post->created_at ? "Posted :". $post->created_at->diffForHumans() : "No date"}}</p>
+        {{$post->created_at ? "Posted : ". $post->created_at->diffForHumans() : "No date"}}</p>
 
     <hr>
     <!-- Preview Image -->
-    <img class="img-responsive" src="{{$post->photo ? $post->photo->path : null}}" alt="">
+    <img  class="img-responsive col-xs-12 col-md-12 col-lg-10 col-sm-12 col-xl-9" src="{{$post->photo ? $post->photo->path : null}}" alt="">
 
     <hr>
     <!-- Post Content -->

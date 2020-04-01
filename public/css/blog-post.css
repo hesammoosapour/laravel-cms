@@ -4,10 +4,38 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
-body {
-    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-}
 
 footer {
-    margin: 50px 0;
+    /*margin: 50px 0;*/
+}
+
+.blog_content {
+    padding-top: 30px;
+}
+
+.moderate_clock_bg{
+    background-color: #8eff77;
+}
+.search_blog_btn {
+    line-height: inherit; !important;
+}
+
+
+.img-responsive
+.thumbnail > img,
+.thumbnail a > img,
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.img-rounded {
+    border-radius: 6px;
+}
+
+@media screen and  (min-width:768px) and (  max-width: 870px) {
+    .clock_nav_collapse:not(.show) {
+        display: inline !important;
+    }
 }
