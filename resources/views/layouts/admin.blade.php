@@ -95,7 +95,7 @@
 {{--   End navbar top / Navigation --}}
 
 <!-- Bootstrap NavBar -->
-    <nav class="navbar navbar-expand-md navbar-dark bg-success" >
+    <nav class="navbar sticky-top navbar-expand-md navbar-dark bg-success" >
         <a class="navbar-brand " href="/">
             <img class="d-inline-block align-top clock_nav_img_admin" height="40" src="/images/Clock.jpg" alt="Clock">
 {{--            &nbsp;<span class="menu-collapsed"></span>--}}

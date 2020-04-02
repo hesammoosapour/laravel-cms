@@ -2,22 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6108dd90-ba04-4a3e-81ea-8addfd0db060" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/images/blogpost.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/new.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/old.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/blog-post_old.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/blog-post.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/blog-post.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/libs.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/libs.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/libs.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/libs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/assets/css/libs/blog-post.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/libs/blog-post.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/libs/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/libs/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/includes/comments_post.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/comments_post.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/blog-post.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/blog-post.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/post.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/post.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -213,7 +207,9 @@
       <workItem from="1585548300871" duration="406000" />
       <workItem from="1585572021258" duration="13534000" />
       <workItem from="1585634051048" duration="12121000" />
-      <workItem from="1585724159371" duration="1884000" />
+      <workItem from="1585724159371" duration="4348000" />
+      <workItem from="1585758654875" duration="3273000" />
+      <workItem from="1585807938583" duration="8215000" />
     </task>
     <task id="LOCAL-00001" summary="so far so good">
       <created>1585072410593</created>

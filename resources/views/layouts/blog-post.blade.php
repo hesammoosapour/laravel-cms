@@ -40,7 +40,7 @@
 <!-- Navigation -->
 
 <!-- Bootstrap NavBar -->
-<nav class="navbar navbar-expand-md navbar-dark bg-success  " >
+<nav class="navbar sticky-top navbar-expand-md navbar-dark bg-success  " >
     <a class="navbar-brand " href="/">
         <img class="d-inline-block align-top clock_nav_img_admin" height="40" src="/images/Clock.jpg" alt="Clock">
         {{--            &nbsp;<span class="menu-collapsed"></span>--}}
@@ -59,7 +59,7 @@
             <li class="nav-item">
                 <a class="nav-link link_admin_nav" href="/posts">Posts</a>
             </li>
-            @if(Auth::user()->isAdmin())
+            @if(Auth::check() && Auth::user()->isAdmin())
                 <li class="nav-item">
                     <a class="nav-link link_admin_nav" href="/admin">Admin</a>
                 </li>
@@ -75,13 +75,19 @@
         <ul class="navbar-nav ml-auto ">
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle link_user_dropdown " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fa fa-user fa-fw"></i> {{Auth::user()->name}}
+                    <i class="fa fa-user fa-fw"></i> {{Auth::check() ? Auth::user()->name : "Login/Sign Up"}}
                 </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <div class="dropdown-menu margin_nav_user" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
                     <a class="dropdown-item" href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item " href="{{ url('/logout') }}"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                    @if(Auth::check())
+                        <a class="dropdown-item " href="{{ url('/logout') }}"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                    @else
+                        <a class="dropdown-item " href="{{ url('/login') }}"><i class="fa fa-sign-in fa-fw"></i> Login</a>
+                    @endif
+
+
                 </div>
             </li>
 

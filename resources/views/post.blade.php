@@ -8,7 +8,7 @@
     <!-- Blog Post -->
 
     <!-- Title -->
-    @if(Auth::user()->isAdmin())
+    @if(Auth::check() && Auth::user()->isAdmin())
 
         <h1><a href="{{route('admin.posts.edit',$post->id)}}">{{$post->title}}</a></h1>
 
@@ -24,7 +24,7 @@
     <hr>
 
     <!-- Date/Time -->
-    <p><span class="glyphicon glyphicon-time"></span>
+    <p><span ><i class="fa fa-clock-o"></i></span>
         {{$post->created_at ? "Posted : ". $post->created_at->diffForHumans() : "No date"}}</p>
 
     <hr>

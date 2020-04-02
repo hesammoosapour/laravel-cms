@@ -8,26 +8,26 @@
 @if(Auth::check())
 
     <!-- Comments Form -->
-    <div class="well">
-        <h4><i class="material-icons">&#xe24c;</i> Leave a Comment:</h4>
-        <div style="display: inline-flex">
-            <img height="65" class="media-object" src="{{Auth::user()->gravatar ? Auth::user()->gravatar : Auth::user()->photo()->path}}" alt="">
-            &nbsp;
-            <h4 class="media-heading"><a href="#">{{Auth::user()->name}}</a></h4>
+    <div class="well d-inline-flex">
+{{--        <h4><i class="material-icons"> &#xe24c; </i> Leave a Comment:</h4>--}}
+            @if( !empty(Auth::user()->photo()->path) || !empty(Auth::user()->gravatar) )
+                <img height="65" class="media-object" src="{{Auth::user()->gravatar ? Auth::user()->gravatar : Auth::user()->photo()->path}}" alt="">
+                @else
+                &nbsp;
+                <h4 class="media-heading"><a href="#">{{Auth::user()->name}}</a></h4>
+            @endif
 
-        </div>
-
-
-        {!! Form::open(['method'=>'POST', 'action'=> 'PostCommentsController@store']) !!}
+        {!! Form::open(['method'=>'POST', 'action'=> 'PostCommentsController@store' ,'class'=>'d-inline-flex']) !!}
 
         <input type="hidden" name="post_id" value="{{$post->id}}">
 
         <div class="form-group">
-            {!! Form::textarea('body', null, ['class'=>'form-control','rows'=>3])!!}
+            {!! Form::textarea('body', null,
+            ['class'=>'form-control ','rows'=>3 ,'cols'=>'95','placeholder'=>'Leave a Comment: ',]) !!}
         </div>
 
         <div class="form-group">
-            {!! Form::submit('Send', ['class'=>'btn btn-primary']) !!}
+            {!! Form::submit('Post', ['class'=>'btn btn-primary ']) !!}
         </div>
         {!! Form::close() !!}
 
@@ -43,19 +43,19 @@
         <!-- Comment -->
         <div class="media">
             <div style="display: flow-root">
-                <a class="pull-left" href="#" style="display: flex">
-                    <img height="65" class="media-object" src="{{Auth::user()->gravatar ? Auth::user()->gravatar : $commenter_photo_path}}" alt="">
+                <a class="d-flex" href="#" >
+                    <img height="65" class="media-object" src="{{Auth::check() && Auth::user()->gravatar ? Auth::user()->gravatar : $commenter_photo_path}}" alt="">
 
-                    <img height="65"  class="media-object"  src="{{$commenter_photo_path}}" alt="" >
-                    &nbsp; <h4 class="media-heading">{{$commenter->name}}</h4>
+{{--                    <img height="65"  class="media-object"  src="{{$commenter_photo_path}}" alt="" >--}}
+                    &nbsp; <p class="media-heading">{{$commenter->name}}</p>
                 </a>
                 &nbsp;
-                <p style=" padding-left: 40%;margin-top: -1.4%;">{{$comment->created_at->diffForHumans()}}</p>
+                
             </div>
 
             <div class="media-body">
 
-                <h4><p>{{$comment->body}}</p></h4>
+                <p>{{$comment->body}}</p>
 
                 <!-- Nested Comment -->
                 <div id="nested-comment" class=" media">
@@ -83,10 +83,11 @@
                             {!! Form::close() !!}
 
                         </div>
-                        {{--                         End of comment-reply col-sm-6 --}}
+{{--                                                 End of comment-reply col-sm-6--}}
 
                     </div>
-                    {{--                            End of Comment-reply-container--}}
+{{--                                                End of Comment-reply-container--}}
+                    <p style=" padding-left: 40%;margin-top: -1.4%;">{{$comment->created_at->diffForHumans()}}</p>
                     <div style="padding-left: 5%">
                         @if(count($comment->replies) > 0)
 
@@ -113,7 +114,7 @@
 
                             <div class="divider" style="border-top: 1px dotted #8c8b8b;"></div>
                         @endif
-                        {{--                        comment replies > 0--}}
+{{--                                     End if           comment replies > 0--}}
                     </div>
                 </div>
                 <!-- End Nested Comment -->

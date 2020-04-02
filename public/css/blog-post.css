@@ -39,3 +39,9 @@ footer {
         display: inline !important;
     }
 }
+
+.margin_nav_user {
+    margin-left: -10%;
+}
+
+
