@@ -174,6 +174,11 @@ class AdminPostsController extends Controller
          $comments = $post->comments()->whereIsActive(1)->get();
          $categories = Category::all();
 
+        $author = User::whereId($post->user_id)->first();
+        $author_photo =  Photo::whereId($author->photo_id)->first() ;
+        $author_photo = $author_photo->path;
+
+
        if ($comments) {
            foreach ($comments as $comment) {
 
@@ -191,15 +196,15 @@ class AdminPostsController extends Controller
                    $replier_photo_path = $replier_photo_name->path;
 
                    return view('post', compact('post', 'comments', 'categories', 'commenter_photo_path',
-                       'commenter', 'replier', 'replier_photo_path'));
+                       'commenter', 'replier', 'replier_photo_path','author_photo'));
                }
                return view('post', compact('post', 'comments', 'categories', 'commenter_photo_path',
-                   'commenter', 'replier', 'replier_photo_path'));
+                   'commenter', 'replier', 'replier_photo_path','author_photo'));
            }
 
        }
 
-        return view('post', compact('post','comments'));
+        return view('post', compact('post','comments','author_photo'));
 
     }
 

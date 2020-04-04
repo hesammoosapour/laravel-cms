@@ -18,14 +18,13 @@
 
     <!-- Author -->
     <p class="lead">
-        by <a href="#">{{$post->user ? $post->user->name : "Unknown User"}}</a>
+        Author : <a href="#"><img height="60"  src="{{$author_photo}}" alt="">{{$post->user ? $post->user->name : "Unknown Author"}}</a>
+
+        <!-- Date/Time -->
+        <span ><i class="fa fa-clock-o"></i></span>
+        {{$post->created_at ? "Posted : ". $post->created_at->diffForHumans() : "No date"}}
+
     </p>
-
-    <hr>
-
-    <!-- Date/Time -->
-    <p><span ><i class="fa fa-clock-o"></i></span>
-        {{$post->created_at ? "Posted : ". $post->created_at->diffForHumans() : "No date"}}</p>
 
     <hr>
     <!-- Preview Image -->
@@ -43,18 +42,8 @@
 
 @section('scripts')
 
-    <script type="text/javascript">
-        function disappear() {
-            replycomment.style.display="none";
-        }
-        $(".comment-reply-container .toggle-reply").click(function(){
-
-            $(this).next().slideToggle("slow");
-
-
-        });
-
-    </script>
+{{--    <script type="text/javascript">--}}
+{{-- </script>--}}
 
 
 
