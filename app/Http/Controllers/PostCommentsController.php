@@ -21,7 +21,7 @@ class PostCommentsController extends Controller
      */
     public function index()
     {
-        $comments = Comment::withTrashed()->get();
+        $comments = Comment::withTrashed()->latest("updated_at")->get();
 
 //        $comments  = Comment::with('replies')->withTrashed()->get();
 

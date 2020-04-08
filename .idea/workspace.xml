@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6108dd90-ba04-4a3e-81ea-8addfd0db060" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Laranew_without_git_public_vendor_node.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1586007525Best-top-desktop-city-new-york-wallpapers-hd-new-york-wallpaper-picture-image-32.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminPostsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminPostsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/blog-post.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/blog-post.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/libs/blog-post.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/libs/blog-post.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/includes/comments_post.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/comments_post.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/post.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/post.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostCommentsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostCommentsController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -207,7 +205,8 @@
       <workItem from="1585758654875" duration="3273000" />
       <workItem from="1585807938583" duration="16437000" />
       <workItem from="1585892738832" duration="5031000" />
-      <workItem from="1585976229997" duration="11730000" />
+      <workItem from="1585976229997" duration="13559000" />
+      <workItem from="1586074494089" duration="708000" />
     </task>
     <task id="LOCAL-00001" summary="so far so good">
       <created>1585072410593</created>
