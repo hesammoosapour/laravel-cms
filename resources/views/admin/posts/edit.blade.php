@@ -10,13 +10,15 @@
 
     <div class="row">
 
-        <div class="col-sm-3">
+        <div class="col-sm-3 col-md-3 col-lg-5">
 
-            <img src="{{isset($post->photo) ? $post->photo->path : '/images/400x400.png'}}" alt="" class="img-responsive">
+            <img src="{{isset($post->photo) ? $post->photo->path : '/images/400x400.png'}}" alt="" class="col-sm-12  img-responsive">
+
+            <p class="text-break">{{isset($post->photo) ?  str_replace("/images/","", $post->photo->path) : ''}}</p>
 
         </div>
 
-        <div class="col-sm-9">
+        <div class="col-sm-5 col-md-5 col-lg-7">
 
         {!! Form::model($post, ['method'=>'PATCH', 'action'=> ['AdminPostsController@update', $post->id], 'files'=>true]) !!}
 

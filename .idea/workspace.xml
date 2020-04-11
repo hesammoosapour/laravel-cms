@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6108dd90-ba04-4a3e-81ea-8addfd0db060" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Laranew_without_git_public_vendor_node.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1586007525Best-top-desktop-city-new-york-wallpapers-hd-new-york-wallpaper-picture-image-32.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laranew_without_git_public_vendor_node.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminMediasController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminMediasController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminPostsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminPostsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostCommentsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostCommentsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/posts/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/posts/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/post.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/post.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -207,6 +211,7 @@
       <workItem from="1585892738832" duration="5031000" />
       <workItem from="1585976229997" duration="13559000" />
       <workItem from="1586074494089" duration="708000" />
+      <workItem from="1586597783376" duration="5322000" />
     </task>
     <task id="LOCAL-00001" summary="so far so good">
       <created>1585072410593</created>

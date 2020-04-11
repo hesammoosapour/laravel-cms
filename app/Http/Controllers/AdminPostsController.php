@@ -30,7 +30,7 @@ class AdminPostsController extends Controller
         $posts = Post::with('comments.replies')->withTrashed()->latest("updated_at")->paginate(10);
 
 
-        return view('admin.posts.index', compact('posts','comments'));
+        return view('admin.posts.index', compact('posts'));
 
     }
 
@@ -175,11 +175,14 @@ class AdminPostsController extends Controller
          $categories = Category::all();
 
         $author = User::whereId($post->user_id)->first();
-        $author_photo =  Photo::whereId($author->photo_id)->first() ;
-        $author_photo = $author_photo->path;
+        if ( $author) {
+            $author_photo = Photo::whereId($author->photo_id)->firstOrFail();
+            $author_photo = $author_photo->path;
+        }else {
+            $author_photo = '';
+        }
 
-
-       if ($comments) {
+        if ($comments) {
            foreach ($comments as $comment) {
 
                $commenter_id = $comment->commenter_id;
@@ -199,7 +202,7 @@ class AdminPostsController extends Controller
                        'commenter', 'replier', 'replier_photo_path','author_photo'));
                }
                return view('post', compact('post', 'comments', 'categories', 'commenter_photo_path',
-                   'commenter', 'replier', 'replier_photo_path','author_photo'));
+                   'commenter', 'author_photo'));
            }
 
        }

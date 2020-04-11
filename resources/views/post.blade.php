@@ -18,7 +18,7 @@
 
     <!-- Author -->
     <p class="lead">
-        Author : <a href="#"><img height="60"  src="{{$author_photo}}" alt="">{{$post->user ? $post->user->name : "Unknown Author"}}</a>
+        Author : <a href="#"><img height="60"  src="{{$author_photo }}" alt="">{{$post->user ? $post->user->name : "Unknown Author"}}</a>
 
         <!-- Date/Time -->
         <span ><i class="fa fa-clock-o"></i></span>

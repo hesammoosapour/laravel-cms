@@ -21,7 +21,7 @@ class AdminMediasController extends Controller
 
 
 
-            return view('admin.media.index', compact('photos', 'post', 'user'));
+            return view('admin.media.index', compact('photos'));
 
     }
 

@@ -35,7 +35,7 @@ class PostCommentsController extends Controller
 //            $user = User::findOrFail($comment->commenter_id)->first(); // Try this for other admins, see if it works.
 
             return view('admin.comments.index',
-                compact('comments','user','comments_no','comments_no_active','comments_no_approved'));
+                compact('comments','comments_no','comments_no_active','comments_no_approved'));
 //        }
 
 //        return view('admin.comments.index', compact('comments'));
