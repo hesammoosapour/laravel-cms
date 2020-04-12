@@ -112,7 +112,7 @@
                     <a class="nav-link link_admin_nav" href="/home">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link link_admin_nav" href="posts">Posts</a>
+                    <a class="nav-link link_admin_nav" href="/posts">Posts</a>
                 </li>
 
             </ul>

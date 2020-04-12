@@ -171,5 +171,6 @@ Route::group(['middleware'=>'auth'], function(){
 
 });
 
+Route::get('/posts','PostController@index')->middleware('web');
 
 
