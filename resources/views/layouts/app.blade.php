@@ -10,7 +10,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
     @yield('title')
-    <title>{{ config('app.name', 'Clock') }}</title>
+    @section('title')
+        <title>{{ config('app.name', 'Clock') }}</title>
+    @stop
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>

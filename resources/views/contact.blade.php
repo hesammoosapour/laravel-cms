@@ -86,13 +86,15 @@
                     <a href="{{ route('register') }}">Register</a>
                 @endif
             @endauth
+                <a href="/" class="title_clock pull-left">Clock</a>
+
         </div>
     @endif
 
-    <div class="content">
+        <div class="content">
         <div class="title title_clock m-b-md">
-            <img class=" clock_nav_img" height="100" src="/images/Clock.jpg" alt="Clock">
-            Clock
+            <a href="/" class="title_clock"><img class=" clock_nav_img" height="100" src="/images/Clock.jpg" alt="Clock">
+            Clock</a>
         </div>
 
         <div class="producer">

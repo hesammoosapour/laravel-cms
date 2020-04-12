@@ -1,5 +1,7 @@
 @extends('layouts.app')
-
+@section('title')
+    <title>Clock Login</title>
+@stop
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
