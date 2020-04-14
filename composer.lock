@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f4753712af64ae2ccb0dc298fb807c4a",
+    "content-hash": "b244d935dca49a1a0085512c594fb8fe",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -816,6 +816,7 @@
                     "email": "jakub.onderka@gmail.com"
                 }
             ],
+            "abandoned": "php-parallel-lint/php-console-color",
             "time": "2018-09-29T17:23:10+00:00"
         },
         {
@@ -862,6 +863,7 @@
                 }
             ],
             "description": "Highlight PHP code in terminal",
+            "abandoned": "php-parallel-lint/php-console-highlighter",
             "time": "2018-09-29T18:48:56+00:00"
         },
         {
@@ -3542,6 +3544,117 @@
                 "dump"
             ],
             "time": "2020-02-26T22:30:10+00:00"
+        },
+        {
+            "name": "tartan/laravel-online-payment",
+            "version": "v7.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/iamtartan/laravel-online-payment.git",
+                "reference": "58a91aeeed5f38391cd8d5b3a522488a54def50a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/iamtartan/laravel-online-payment/zipball/58a91aeeed5f38391cd8d5b3a522488a54def50a",
+                "reference": "58a91aeeed5f38391cd8d5b3a522488a54def50a",
+                "shasum": ""
+            },
+            "require": {
+                "ext-soap": "*",
+                "illuminate/contracts": "~5.6.0|^6.0|^7.0",
+                "illuminate/database": "~5.6.0|^6.0|^7.0",
+                "illuminate/http": "~5.6.0|^6.0|^7.0",
+                "illuminate/routing": "~5.6.0|^6.0|^7.0",
+                "illuminate/support": "~5.6.0|^6.0|^7.0",
+                "illuminate/view": "~5.6.0|^6.0|^7.0",
+                "php": ">=7.0.0",
+                "tartan/laravel-xlog": "^1.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.0",
+                "orchestra/testbench": "^3.8|^4.0|^5.0",
+                "phpunit/phpunit": "^7.5|^8.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Tartan\\Larapay\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Aboozar Ghaffari <Tartan>",
+                    "email": "aboozar.ghf@gmail.com"
+                },
+                {
+                    "name": "Milad Kianmehr",
+                    "email": "milad.kian@gmail.com"
+                }
+            ],
+            "description": "Iranian payment gateways handler for laravel applications",
+            "keywords": [
+                "Bank",
+                "gateway",
+                "iran",
+                "online payment",
+                "payment",
+                "shetab"
+            ],
+            "time": "2020-04-05T15:27:23+00:00"
+        },
+        {
+            "name": "tartan/laravel-xlog",
+            "version": "v1.2.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/iamtartan/laravel-extended-logger.git",
+                "reference": "8a5bfbfb4b55b4d9cc570b492eb1272195b42793"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/iamtartan/laravel-extended-logger/zipball/8a5bfbfb4b55b4d9cc570b492eb1272195b42793",
+                "reference": "8a5bfbfb4b55b4d9cc570b492eb1272195b42793",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": ">=5.0.0",
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "laravel-component",
+            "autoload": {
+                "psr-4": {
+                    "Tartan\\Log\\": "src"
+                },
+                "files": [
+                    "src/helper.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Aboozar Ghaffari <Tartan>",
+                    "email": "aboozar.ghf@gmail.com"
+                }
+            ],
+            "description": "extended Laravel 5+ log",
+            "keywords": [
+                "Laravel log",
+                "extended logger",
+                "laravel",
+                "log",
+                "xlog"
+            ],
+            "time": "2020-02-21T20:31:46+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
