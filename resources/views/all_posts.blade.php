@@ -75,7 +75,7 @@
                         {{isset($post->created_at) ? $post->created_at->diffForhumans() : ""}}
 
                         <hr>
-                        <img height="400" width="600"  src="{{$post->photo ? $post->photo->path : '/images/400x400.png' }}" alt="">
+                        <img height="400"  class="col-md-12" src="{{$post->photo ? $post->photo->path : '/images/400x400.png' }}" alt="">
 
                         <h2><a href="{{route('home.post', $post->slug ? $post->slug : $post->id)}}">{{$post->title}}</a></h2>
 
