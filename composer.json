@@ -17,6 +17,7 @@
         "laravel/tinker": "^2.0",
         "laravel/ui": "^2.0",
         "laravelcollective/html": "^6.1",
+        "shetabit/payment": "^2.4",
         "tartan/laravel-online-payment": "^7.0"
     },
     "require-dev": {

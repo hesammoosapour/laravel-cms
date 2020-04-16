@@ -182,7 +182,13 @@ return [
 
 //        Intervention\Image\ImageServiceProvider::class,
 
-    ],
+//        Tartan\Larapay\LarapayServiceProvider::class,
+
+//        \Tartan\Larapay\LarapayServiceProvider::class(),
+
+//        Shetabit\Payment\Provider\PaymentServiceProvider::class,
+
+        ],
 
     /*
     |--------------------------------------------------------------------------
@@ -234,6 +240,8 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 //        'Image' => Intervention\Image\Facades\Image::class,
+//        'Larapay' => Tartan\Larapay\Facades\Larapay::class,
+//        'Payment' => Shetabit\Payment\Facade\Payment::class,
 
     ],
 

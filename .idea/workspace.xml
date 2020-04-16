@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6108dd90-ba04-4a3e-81ea-8addfd0db060" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/laranew.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laranew.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -145,6 +150,9 @@
       <path value="$PROJECT_DIR$/vendor/laravelcollective/html" />
       <path value="$PROJECT_DIR$/vendor/cviebrock/eloquent-sluggable" />
       <path value="$PROJECT_DIR$/vendor/cocur/slugify" />
+      <path value="$PROJECT_DIR$/vendor/tartan/laravel-xlog" />
+      <path value="$PROJECT_DIR$/vendor/tartan/laravel-online-payment" />
+      <path value="$PROJECT_DIR$/vendor/shetabit/payment" />
     </include_path>
   </component>
   <component name="ProjectId" id="1Za42IbFZYXPQNkwE1ts556W5ep" />
@@ -215,7 +223,8 @@
       <workItem from="1586597783376" duration="5322000" />
       <workItem from="1586669660356" duration="13441000" />
       <workItem from="1586790733150" duration="982000" />
-      <workItem from="1586852494467" duration="1287000" />
+      <workItem from="1586852494467" duration="5638000" />
+      <workItem from="1587013700628" duration="901000" />
     </task>
     <task id="LOCAL-00001" summary="so far so good">
       <created>1585072410593</created>
