@@ -53,43 +53,6 @@ Route::get('admin/user/roles',['middleware'=>['role','auth','web'],function (){
 //Route::get('admin','AdminController@index');
 
 
-// Email
-//Route::get('email',function (){
-//    $data = [
-//        'title' => 'Hey guys',
-//        'content'=>'This is clock rec system new features :'
-//    ];
-//
-//    Mail::send('emails.test',$data, function ($message) {
-//        $message->to('hesammoosapour@gmail.com')->subject('Clockfuss');
-//    });
-//    function get_bulk_validation() {
-//        $params = array(
-////            "address" => "hesammoosapour@yahoo.com",
-//            'from' => 'hesammoosapour@yahoo.com',
-//            'to' => 'hesammoosapour@gmail.com',
-//            'title' => 'This is title',
-//            'content' => 'This is content',
-//            'subject'=>'Clock represents'
-//        );
-//        $ch = curl_init();
-//
-//        curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
-//        curl_setopt($ch, CURLOPT_USERPWD, 'api:3fb479603b24546bb098cb961e391871-ee13fadb-41101786');
-//        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-//
-//        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
-//        curl_setopt($ch, CURLOPT_POSTFIELDS, $params);
-//        curl_setopt($ch, CURLOPT_URL, 'https://api.mailgun.net/v4/address/validate');
-//        $result = curl_exec($ch);
-//        curl_close($ch);
-//
-//        return $result;
-//    }
-//});
-//
-
-
 //Route::get('password/reset', function () {
 
 //})->name('password/reset');
